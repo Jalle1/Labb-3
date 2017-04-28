@@ -1,0 +1,32 @@
+<div controller="calculateage">
+<h1>{{title}}</h1>
+<ul>
+	<li ng-repeat="item in items">{{item}}</li>
+</ul>
+
+<div ng-controller="calculate as calculator">
+
+
+		<input type="text" ng-model="calculator.input1"></input>
+		<span ng-bind="calculator.Selected"></span>
+		<input type="text" ng-model="calculator.input2"></input>
+		<button ng-click="calculator.completeResult()">Svar:</button>
+		<span ng-bind="calculator.result"></span>
+
+		<p>	Välj
+		<p>Punkt är komma någonting</p>
+			<button ng-click="calculator.buttonSelected('-')">-</button>
+			<button ng-click="calculator.buttonSelected('/')">/</button>
+			<button ng-click="calculator.buttonSelected('*')">*</button>
+			<button ng-click="calculator.buttonSelected('+')">+</button>
+		</p>
+		{{calculator.input1}}	{{calculator.input2}}
+</div>
+
+<br>
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{fullName()}}
+</div>
+
